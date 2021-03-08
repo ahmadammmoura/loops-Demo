@@ -20,7 +20,7 @@ function buy() {
 
     var card = `<div class="card">
                     <img src="/img/${device}.jpg" alt="${device}" style="width:100%">
-                    <h1>NOKIA 3310</h1>
+                    <h1>${device}</h1>
                     <p class="title">MOBILE</p>
 
                 </div>`
