@@ -1,23 +1,36 @@
 var device = prompt("you want mobile or laptop")
 
+function answer() {
+    while (device !== "mobile" && device !== "laptop") {
+        device = prompt("you want mobile or laptop")
+    }
+}
 
+function choose() {
+    var item = ''
 
-while(device !== "mobile" && device !== "laptop"){
-    device = prompt("you want mobile or laptop")
+    if (device == "laptop" || device == "mobile") {
+        item = item + device
+    }
 }
 
 
-var item = ''
+function buy() {
+    var numberOfItems = prompt(`how many ${device}s you want`)
 
-if(device == "laptop" || device == "mobile"){
-    item = item+device
+    var card = `<div class="card">
+                    <img src="/img/${device}.jpg" alt="John" style="width:100%">
+                    <h1>NOKIA 3310</h1>
+                    <p class="title">MOBILE</p>
+
+                </div>`
+
+    for (var i = 1; i <= numberOfItems; i++) {
+        document.getElementById("container").innerHTML += card
+    }
 }
 
-var numberOfItems = prompt(`how many ${device}s you want` )
 
-var img = `<img src = "img/${device}.jpg" alt ="${device} photo " width = "150px"  height ="150px"   />` 
-
-for(var i = 1 ; i<=numberOfItems ; i++){
-    document.write(img)
-}
-
+answer()
+choose()
+buy()
