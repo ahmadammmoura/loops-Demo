@@ -19,7 +19,7 @@ function buy() {
     var numberOfItems = prompt(`how many ${device}s you want`)
 
     var card = `<div class="card">
-                    <img src="/img/${device}.jpg" alt="${device}" style="width:100%">
+                    <img src="img/${device}.jpg" alt="${device}" style="width:100%">
                     <h1>${device}</h1>
                     <p class="title">MOBILE</p>
 
